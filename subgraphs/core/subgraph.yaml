@@ -4,14 +4,14 @@ schema:
 dataSources:
     - kind: ethereum
       name: GridFactory
-      network: base
+      network: linea
       source:
           abi: GridFactory
           address: "0x32d1F0Dce675902f89D72251DB4AB1d728efa19c"
           startBlock: 98996
       mapping:
           kind: ethereum/events
-          apiVersion: 0.0.7
+          apiVersion: 0.0.1
           language: wasm/assemblyscript
           entities:
               - Grid
@@ -32,14 +32,14 @@ dataSources:
           file: ./src/grid-factory.ts
     - kind: ethereum
       name: PriceOracle
-      network: base
+      network: linea
       source:
           abi: PriceOracle
           address: "0x9Da10a86F57e810A8A1D72F4A874419eB69BF16A"
           startBlock: 98996
       mapping:
           kind: ethereum/events
-          apiVersion: 0.0.7
+          apiVersion: 0.0.1
           language: wasm/assemblyscript
           entities:
               - Grid
@@ -53,12 +53,12 @@ dataSources:
 templates:
     - kind: ethereum
       name: Grid
-      network: base
+      network: linea
       source:
           abi: Grid
       mapping:
           kind: ethereum/events
-          apiVersion: 0.0.7
+          apiVersion: 0.0.1
           language: wasm/assemblyscript
           entities:
               - ChangeBundleForSettleOrder
